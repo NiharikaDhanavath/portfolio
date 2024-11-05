@@ -13,7 +13,7 @@ body {
 
 /* Header and Navigation */
 header {
-  background-color: #ffffff; /* Set solid background color to prevent background image bleed */
+  background-color: #ffffff; /* Solid background color to prevent background image bleed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   position: sticky;
@@ -54,19 +54,24 @@ section {
 }
 
 #Home {
-  background-image: url("background.jpg"); /* Background image for Home section only */
-  background-size: cover;
-  background-position: center;
-  color: white;
   padding: 6rem 0;
+  color: white;
 }
 
-#Home h1 {
+.home-content {
+  background-image: url("background.jpg"); /* Apply background image only to content */
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  border-radius: 8px;
+}
+
+.home-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-#Home p {
+.home-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
@@ -98,8 +103,8 @@ section {
 }
 
 .about-image img {
-  width: 300px; /* Larger image size */
-  height: 300px; /* Square format */
+  width: 200px; /* Larger image size */
+  height: 200px; /* Square format */
   border-radius: 10px; /* Slightly rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
@@ -152,7 +157,7 @@ section {
     flex-direction: column;
   }
 
-  #Home h1 {
+  .home-content h1 {
     font-size: 2.5rem;
   }
 
