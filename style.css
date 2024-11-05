@@ -98,8 +98,8 @@ section {
 }
 
 .about-image img {
-  width: 200px; /* Larger image size */
-  height: 200px; /* Square format */
+  width: 300px; /* Larger image size */
+  height: 300px; /* Square format */
   border-radius: 10px; /* Slightly rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
