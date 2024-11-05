@@ -1,44 +1,160 @@
-/* Reset Styles */
+/* General Reset and Body Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body Styling */
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  color: white;
-  background-color: black;
+  color: white; /* Set text color to white */
+  background-color: black; /* Set background color to black */
 }
 
-/* Navbar Styling */
+/* Header and Navigation */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the navbar contents */
-    gap: 50px; /* Space out the links evenly */
+    align-items: center;
+    justify-content: space-evenly; /* Evenly space out the buttons */
     padding: 20px 0;
     background-color: black;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
 }
 
 .navbar a {
-    color: white;
+    padding: 10px 20px;
+    background-color: white; /* White background for button style */
+    color: black; /* Black text */
+    border: 2px solid white;
+    border-radius: 5px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .navbar a:hover {
-    color: #aaaaaa; /* Subtle color change on hover */
+    background-color: black; /* Switch to black on hover */
+    color: white; /* Switch text to white on hover */
 }
 
-/* Main Content */
+/* Main Sections */
 main {
-  padding-top: 80px; /* To avoid overlap with fixed navbar */
+  padding: 2rem;
+}
+
+#Home {
+  background-image: url("path/to/your/background-image.jpg"); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+#Home h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#Home p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Updated Hire Me Button */
+.hire-me-button {
+  padding: 1rem 2rem;
+  background-color: white; /* White background */
+  color: black; /* Black text */
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hire-me-button:hover {
+  background-color: black; /* Switch to black on hover */
+  color: white; /* Switch text to white on hover */
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.about-image img:hover {
+  transform: scale(1.1);
+}
+
+.about-text {
+  max-width: 400px;
+  text-align: left;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 1rem;
+}
+
+.social-links a {
+  margin: 0 15px;
+  transition: transform 0.3s;
+}
+
+.social-links img {
+  width: 32px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.social-links img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  #Home h1 {
+    font-size: 2.5rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .hire-me-button {
+    font-size: 1rem;
+  }
 }
