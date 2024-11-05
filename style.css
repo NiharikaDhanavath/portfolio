@@ -13,7 +13,7 @@ body {
 
 /* Header and Navigation */
 header {
-  background-color: #ffffff;
+  background-color: #ffffff; /* Set solid background color to prevent background image bleed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   position: sticky;
@@ -54,7 +54,7 @@ section {
 }
 
 #Home {
-  background-image: url("background.jpg"); /* Replace with your image */
+  background-image: url("background.jpg"); /* Background image for Home section only */
   background-size: cover;
   background-position: center;
   color: white;
@@ -98,9 +98,9 @@ section {
 }
 
 .about-image img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px; /* Larger image size */
+  height: 200px; /* Square format */
+  border-radius: 10px; /* Slightly rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
@@ -131,7 +131,7 @@ section {
 }
 
 .social-links a {
-  margin: 0 10px;
+  margin: 0 15px; /* Increased spacing between icons */
   transition: transform 0.3s;
 }
 
