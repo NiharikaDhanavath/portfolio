@@ -14,8 +14,8 @@ body {
 /* Header and Navigation */
 .navbar {
     display: flex;
+    justify-content: center; /* Center the navbar items horizontally */
     align-items: center;
-    justify-content: center;
     padding: 20px 0;
     background-color: black;
 }
@@ -23,16 +23,15 @@ body {
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 20px; /* Spacing between navigation links */
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin: 0 30px; /* Increase spacing for even distribution */
+    font-size: 18px; /* Slightly larger font size */
+    font-weight: normal;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #aaaaaa; /* Slight color change on hover for subtle effect */
+    color: #aaaaaa; /* Subtle hover effect */
 }
 
 /* Main Sections */
@@ -59,11 +58,11 @@ main {
   margin-bottom: 2rem;
 }
 
-/* Updated Hire Me Button */
+/* Hire Me Button */
 .hire-me-button {
   padding: 1rem 2rem;
-  background-color: white; /* White background */
-  color: black; /* Black text */
+  background-color: white;
+  color: black;
   border: 2px solid white;
   border-radius: 5px;
   cursor: pointer;
@@ -72,8 +71,8 @@ main {
 }
 
 .hire-me-button:hover {
-  background-color: black; /* Switch to black on hover */
-  color: white; /* Switch text to white on hover */
+  background-color: black;
+  color: white;
 }
 
 /* About Section */
