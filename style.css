@@ -15,14 +15,13 @@ body {
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-around; /* Evenly space out the buttons */
-    padding: 15px;
+    justify-content: space-evenly; /* Evenly space out the buttons */
+    padding: 20px 0;
     background-color: black;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar a {
-    padding: 0.5rem 1rem;
+    padding: 10px 20px;
     background-color: white; /* White background for button style */
     color: black; /* Black text */
     border: 2px solid white;
