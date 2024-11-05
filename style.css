@@ -7,36 +7,40 @@
 
 body {
   font-family: 'Helvetica Neue', sans-serif;
-  color: white; /* Set text color to white */
-  background-color: black; /* Set background color to black */
+  color: white;
+  background-color: black;
 }
 
-/* Header and Navigation */
+/* Header and Centered Navigation */
 .navbar {
     display: flex;
-    justify-content: center; /* Center the navbar items horizontally */
+    justify-content: space-around; /* Space items evenly across the navbar */
     align-items: center;
-    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
     background-color: black;
+    z-index: 1000;
 }
 
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 0 30px; /* Increase spacing for even distribution */
-    font-size: 18px; /* Slightly larger font size */
-    font-weight: normal;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #aaaaaa; /* Subtle hover effect */
+    color: #aaaaaa; /* Subtle hover color change */
 }
 
-/* Main Sections */
+/* Main Content */
 main {
-  padding: 2rem;
+  padding-top: 80px; /* Space to avoid overlap with the fixed navbar */
 }
 
 #Home {
