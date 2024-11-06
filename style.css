@@ -118,12 +118,11 @@ nav a:hover {
     justify-content: flex-start;
 }
 
-.about-section .social-icons a {
-    color: #fff;
-    font-size: 24px;
-    transition: color 0.3s;
+.about-section .social-icons a img {
+    width: 32px; /* Adjust icon size as needed */
+    transition: transform 0.3s;
 }
 
-.about-section .social-icons a:hover {
-    color: #ddd;
+.about-section .social-icons a img:hover {
+    transform: scale(1.1);
 }
