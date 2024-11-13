@@ -1,9 +1,11 @@
+// Smooth scroll for navigation buttons
 document.querySelectorAll('.nav-button').forEach(button => {
   button.addEventListener('click', event => {
     const section = document.getElementById(event.target.id);
     section.scrollIntoView({ behavior: "smooth" });
   });
 });
+
 // Skill progress values
 const skillProgress = {
   "html-bar": 80,
@@ -27,11 +29,18 @@ function animateProgressBars() {
   });
 }
 
-// Event listener for scrolling to trigger the skill animation
-window.addEventListener('scroll', () => {
+// Function to check if the Skills section is in view
+function isSkillsSectionInView() {
   const skillsSection = document.querySelector('.skills-section');
   const rect = skillsSection.getBoundingClientRect();
-  if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+// Event listener for scrolling to trigger the skill animation once
+let skillsAnimated = false; // To ensure the animation happens only once
+window.addEventListener('scroll', () => {
+  if (!skillsAnimated && isSkillsSectionInView()) {
     animateProgressBars();
+    skillsAnimated = true;
   }
 });
