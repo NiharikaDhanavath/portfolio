@@ -7,13 +7,16 @@ document.querySelectorAll('.nav-button').forEach(button => {
 // Skill progress values
 const skillProgress = {
   "html-bar": 80,
+  "python-bar": 80,
   "css-bar": 70,
   "js-bar": 85,
   "angular-bar": 75,
+  "devops-bar": 80,
   "node-bar": 60,
   "react-bar": 65,
   "git-bar": 90,
-  "gaming-bar": 50
+  "artificialintelligence-bar": 90,
+  "machinelearning-bar": 50
 };
 
 // Function to animate the progress bars
