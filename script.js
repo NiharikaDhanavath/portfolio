@@ -11,7 +11,7 @@ const skillProgress = {
   "html-bar": 80,
   "python-bar": 80,
   "css-bar": 70,
-  "js-bar": 85,
+  "javascript-bar": 85,
   "angular-bar": 75,
   "devops-bar": 80,
   "node-bar": 60,
