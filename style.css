@@ -176,7 +176,7 @@ nav a:hover {
     height: 8px;
     background-color: #fff;
     width: 0;
-    transition: width 2s ease; /* Ensures a smooth transition */
+    transition: width 2s ease;
 }
 
 .more-text {
@@ -184,83 +184,3 @@ nav a:hover {
     margin-top: 20px;
     font-size: 14px;
 }
-
-/* Works Section */
-.works-section {
-    background-color: #000;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.works-section h2 {
-    font-size: 72px;
-    color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-}
-
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
-    background-color: #222;
-    border-radius: 8px;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    max-width: 500px;
-    width: 100%;
-    gap: 20px;
-}
-
-.project-info {
-    flex: 2;
-}
-
-.project-info h3 {
-    font-size: 24px;
-    color: #fff;
-}
-
-.project-link {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-}
-
-.project-link img {
-    width: 20px;
-    height: 20px;
-}
-
-.project-description {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
-}
-
-.project-skills {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.skill-badge {
-    background-color: rgba(230, 230, 250, 0.2);
-    color: #000;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-}
-
-.project-image {
-    flex: 1;
-    max-width: 120px;
-    border-radius: 5px;
-}
-
