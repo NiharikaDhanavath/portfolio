@@ -21,6 +21,9 @@ const skillProgress = {
   "machinelearning-bar": 70
 };
 
+// Variable to track if animation has already been triggered
+let skillsAnimated = false;
+
 // Function to animate the progress bars
 function animateProgressBars() {
   Object.keys(skillProgress).forEach(id => {
@@ -36,7 +39,7 @@ function isSkillsSectionInView() {
   return rect.top < window.innerHeight && rect.bottom >= 0;
 }
 
-// Event listener for scrolling to trigger the skill animation
+// Event listener for scrolling to trigger the skill animation once
 window.addEventListener('scroll', () => {
   if (isSkillsSectionInView()) {
     if (!skillsAnimated) {
@@ -44,9 +47,8 @@ window.addEventListener('scroll', () => {
       skillsAnimated = true;
     }
   } else {
-    // Reset animation flag when section is out of view
+    // Reset animation flag and bar widths when section is out of view
     skillsAnimated = false;
-    // Reset bar widths if you want them to animate again
     Object.keys(skillProgress).forEach(id => {
       const bar = document.getElementById(id);
       bar.style.width = '0%';
