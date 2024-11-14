@@ -21,14 +21,16 @@ const skillProgress = {
   "machinelearning-bar": 70
 };
 
-// Variable to track if animation has already been triggered
+// Flag to ensure the animation is triggered only once per view
 let skillsAnimated = false;
 
 // Function to animate the progress bars
 function animateProgressBars() {
   Object.keys(skillProgress).forEach(id => {
     const bar = document.getElementById(id);
-    bar.style.width = skillProgress[id] + '%';
+    if (bar) {
+      bar.style.width = skillProgress[id] + '%';
+    }
   });
 }
 
@@ -39,19 +41,19 @@ function isSkillsSectionInView() {
   return rect.top < window.innerHeight && rect.bottom >= 0;
 }
 
-// Event listener for scrolling to trigger the skill animation once
+// Scroll event listener to trigger the progress bar animation
 window.addEventListener('scroll', () => {
-  if (isSkillsSectionInView()) {
-    if (!skillsAnimated) {
-      animateProgressBars();
-      skillsAnimated = true;
-    }
-  } else {
-    // Reset animation flag and bar widths when section is out of view
+  if (isSkillsSectionInView() && !skillsAnimated) {
+    animateProgressBars();
+    skillsAnimated = true;
+  } else if (!isSkillsSectionInView()) {
     skillsAnimated = false;
+    // Reset bar widths for re-animation if desired
     Object.keys(skillProgress).forEach(id => {
       const bar = document.getElementById(id);
-      bar.style.width = '0%';
+      if (bar) {
+        bar.style.width = '0%';
+      }
     });
   }
 });
