@@ -22,21 +22,19 @@
     background-color: #222;
     border-radius: 8px;
     padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
     max-width: 600px;
     width: 100%;
-    gap: 20px;
-    justify-content: space-between;
+    align-items: start;
 }
 
 .project-info {
-    flex: 2;
     text-align: left;
 }
 
-.project-info h3 {
+.project-title {
     font-size: 24px;
     color: #fff;
     opacity: 0.9;
@@ -47,6 +45,7 @@
     align-items: center;
     gap: 5px;
     font-size: 14px;
+    margin-top: 5px;
 }
 
 .project-link img.github-logo {
@@ -75,8 +74,7 @@
 }
 
 .project-image {
-    flex: 1;
-    max-width: 150px;
+    max-width: 100%;
     border-radius: 5px;
-    align-self: flex-start;
+    align-self: start;
 }
