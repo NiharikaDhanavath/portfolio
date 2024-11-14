@@ -1,8 +1,8 @@
 import React from 'react';
 import './Works.css';
-import githubLogo from './github-logo.jpg'; // Ensure this is the correct path
-import portfolioImage from './portfolio-image.jpg'; // Replace with the correct path to your project image
-import weatherIcons from './weather-icons.png'; // Replace with the correct path to your project image
+import githubLogo from './github-logo.jpg'; // Update path if necessary
+import portfolioImage from './portfolio-image.jpg'; // Update path if necessary
+import weatherIcons from './weather-icons.png'; // Update path if necessary
 
 const projects = [
   {
@@ -29,7 +29,7 @@ function Works() {
         {projects.map((project, index) => (
           <div className="project-card" key={index}>
             <div className="project-info">
-              <h3>{project.title}</h3>
+              <h3 className="project-title">{project.title}</h3>
               <div className="project-link">
                 <span>Have a look</span>
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
