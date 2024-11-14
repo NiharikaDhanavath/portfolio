@@ -1,6 +1,6 @@
 import React from 'react';
-import './Works.css'; // Import the CSS for this component
-import githubLogo from './github-logo.jpg'; // Replace with the correct path to your GitHub logo
+import './Works.css';
+import githubLogo from './github-logo.jpg'; // Ensure this is the correct path
 import portfolioImage from './portfolio-image.jpg'; // Replace with the correct path to your project image
 import weatherIcons from './weather-icons.png'; // Replace with the correct path to your project image
 
@@ -33,7 +33,7 @@ function Works() {
               <div className="project-link">
                 <span>Have a look</span>
                 <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                  <img src={githubLogo} alt="GitHub Link" />
+                  <img src={githubLogo} alt="GitHub Link" className="github-logo" />
                 </a>
               </div>
               <p className="project-description">{project.description}</p>
