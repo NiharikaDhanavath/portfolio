@@ -18,7 +18,7 @@ const skillProgress = {
   "react-bar": 65,
   "git-bar": 90,
   "artificialintelligence-bar": 90,
-  "machinelearning-bar": 50
+  "machinelearning-bar": 70
 };
 
 // Function to animate the progress bars
@@ -36,11 +36,20 @@ function isSkillsSectionInView() {
   return rect.top < window.innerHeight && rect.bottom >= 0;
 }
 
-// Event listener for scrolling to trigger the skill animation once
-let skillsAnimated = false; // To ensure the animation happens only once
+// Event listener for scrolling to trigger the skill animation
 window.addEventListener('scroll', () => {
-  if (!skillsAnimated && isSkillsSectionInView()) {
-    animateProgressBars();
-    skillsAnimated = true;
+  if (isSkillsSectionInView()) {
+    if (!skillsAnimated) {
+      animateProgressBars();
+      skillsAnimated = true;
+    }
+  } else {
+    // Reset animation flag when section is out of view
+    skillsAnimated = false;
+    // Reset bar widths if you want them to animate again
+    Object.keys(skillProgress).forEach(id => {
+      const bar = document.getElementById(id);
+      bar.style.width = '0%';
+    });
   }
 });
