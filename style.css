@@ -176,7 +176,7 @@ nav a:hover {
     height: 8px;
     background-color: #fff;
     width: 0;
-    transition: width 2s ease;
+    transition: width 2s ease; /* Ensures a smooth transition */
 }
 
 .more-text {
