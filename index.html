@@ -132,5 +132,27 @@
   </main>
 
   <script src="script.js"></script>
+  <section class="works-section">
+  <h2>Works</h2>
+  <div class="projects-container">
+    <div class="project-card" *ngFor="let project of projects">
+      <div class="project-info">
+        <h3>{{ project.title }}</h3>
+        <div class="project-link">
+          <span>Have a look</span>
+          <a [href]="project.githubLink" target="_blank">
+            <img src="github-logo.jpg" alt="GitHub Link">
+          </a>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-skills">
+          <span *ngFor="let skill of project.skills" class="skill-badge">{{ skill }}</span>
+        </div>
+      </div>
+      <img [src]="project.image" alt="{{ project.title }}" class="project-image">
+    </div>
+  </div>
+</section>
+
 </body>
 </html>
