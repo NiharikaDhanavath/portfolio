@@ -184,3 +184,49 @@ nav a:hover {
     margin-top: 20px;
     font-size: 14px;
 }
+.works-section {
+    background-color: #000;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.works-section h2 {
+    font-size: 72px;
+    color: rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill {
+    text-align: center;
+    color: #fff;
+}
+
+.skill-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #fff;
+    width: 0;
+    transition: width 2s ease-in-out;
+}
