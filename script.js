@@ -53,3 +53,29 @@ window.addEventListener('scroll', () => {
     });
   }
 });
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-works',
+  templateUrl: './works.component.html',
+  styleUrls: ['./works.component.css']
+})
+export class WorksComponent {
+  projects = [
+    {
+      title: 'My Digital Showcase',
+      githubLink: 'https://github.com/YourGithub/my-digital-showcase',
+      description: 'I crafted a digital showcase - my portfolio website - to flaunt my projects and skills.',
+      skills: ['React', 'Next.js', 'Tailwind CSS'],
+      image: 'portfolio-image.jpg'
+    },
+    {
+      title: 'SkyWatch',
+      githubLink: 'https://github.com/YourGithub/skywatch',
+      description: 'SkyWatch is a dynamic React JS weather app showcasing temperature, region, and local time display.',
+      skills: ['React'],
+      image: 'weather-icons.png'
+    }
+  ];
+}
