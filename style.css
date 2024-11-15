@@ -78,14 +78,13 @@ nav a:hover {
     justify-content: center;
     padding: 100px 20px;
     text-align: left;
-    position: relative;
 }
 
 .about-section h2 {
     font-size: 72px;
     color: rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
 }
 
 .about-section .content {
@@ -97,41 +96,11 @@ nav a:hover {
     gap: 40px;
 }
 
-.about-section .image-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
 .about-section .image-container img {
     max-width: 100%;
     border-radius: 10px;
 }
 
-.about-section .text-container {
-    flex: 1;
-    padding-left: 40px;
-}
-
-.about-section .text-container p {
-    margin-bottom: 20px;
-}
-
-.about-section .social-icons {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-}
-
-.about-section .social-icons a img {
-    width: 32px;
-    transition: transform 0.3s;
-}
-
-.about-section .social-icons a img:hover {
-    transform: scale(1.1);
-}
 /* Skills Section */
 .skills-section {
     background-color: #000;
@@ -174,7 +143,7 @@ nav a:hover {
 
 .progress-bar {
     height: 8px;
-    background-color: #fff;
+    background-color: #4caf50;
     width: 0;
     transition: width 2s ease;
 }
@@ -183,50 +152,4 @@ nav a:hover {
     color: #ddd;
     margin-top: 20px;
     font-size: 14px;
-}
-.works-section {
-    background-color: #000;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.works-section h2 {
-    font-size: 72px;
-    color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.skill {
-    text-align: center;
-    color: #fff;
-}
-
-.skill-title {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.progress-bar {
-    width: 100px;
-    height: 5px;
-    background-color: #333;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
-
-.progress {
-    height: 100%;
-    background-color: #fff;
-    width: 0;
-    transition: width 2s ease-in-out;
 }
