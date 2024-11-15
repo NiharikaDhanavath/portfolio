@@ -76,7 +76,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 80px 20px; /* Reduced padding to decrease gap */
+    padding: 60px 20px; /* Reduced padding to decrease gap */
     text-align: left;
     position: relative;
 }
@@ -135,7 +135,7 @@ nav a:hover {
 
 /* Skills Section */
 .skills-section {
-    padding: 80px 20px;
+    padding: 60px 20px; /* Reduced padding to decrease gap */
     text-align: center;
 }
 
@@ -175,4 +175,11 @@ nav a:hover {
     background-color: #fff; /* Changed to white */
     width: 0;
     transition: width 2s ease-in-out;
+}
+
+/* Adjust for last row to center items */
+.skills-container > .skill:nth-last-child(-n+3) {
+    grid-column: span 4;
+    display: flex;
+    justify-content: center;
 }
