@@ -1,0 +1,12 @@
+<div class="skills-section" id="Skills">
+  <h2>Skills</h2>
+  <div class="skills-container">
+    <div class="skill" *ngFor="let skill of skills">
+      <span class="skill-name">{{ skill.name }}</span>
+      <div class="progress-bar-container">
+        <div class="progress-bar" [style.width]="skill.inView ? skill.width : '0'"></div>
+      </div>
+    </div>
+  </div>
+  <p class="more-text">and more...</p>
+</div>
