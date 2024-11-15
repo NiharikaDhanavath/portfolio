@@ -146,11 +146,11 @@ nav a:hover {
 }
 
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four columns for the first two rows */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    justify-items: center;
-    max-width: 800px; /* Center the grid and limit the width */
+    max-width: 800px;
     margin: 0 auto;
 }
 
