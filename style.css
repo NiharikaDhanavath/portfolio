@@ -147,8 +147,8 @@ nav a:hover {
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 100px; /* Adjusted spacing for rows */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     justify-items: center;
 }
 
