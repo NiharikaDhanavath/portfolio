@@ -132,58 +132,6 @@ nav a:hover {
 .about-section .social-icons a img:hover {
     transform: scale(1.1);
 }
-/* Skills Section */
-.skills-section {
-    background-color: #000;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.skills-section h2 {
-    font-size: 72px;
-    color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
-}
-
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
-}
-
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-}
-
-.skill-name {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.progress-bar-container {
-    width: 100%;
-    background-color: #333;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.progress-bar {
-    height: 8px;
-    background-color: #fff;
-    width: 0;
-    transition: width 2s ease;
-}
-
-.more-text {
-    color: #ddd;
-    margin-top: 20px;
-    font-size: 14px;
-}
 .works-section {
     background-color: #000;
     color: #fff;
@@ -208,6 +156,7 @@ nav a:hover {
 .skill {
     text-align: center;
     color: #fff;
+    width: 150px; /* Ensures consistent width for each skill box */
 }
 
 .skill-title {
@@ -216,7 +165,7 @@ nav a:hover {
 }
 
 .progress-bar {
-    width: 100px;
+    width: 100%;
     height: 5px;
     background-color: #333;
     border-radius: 5px;
@@ -226,7 +175,7 @@ nav a:hover {
 
 .progress {
     height: 100%;
-    background-color: #fff;
+    background-color: #4caf50; /* Visible color for progress */
     width: 0;
     transition: width 2s ease-in-out;
 }
