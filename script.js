@@ -1,12 +1,6 @@
-
- document.addEventListener("DOMContentLoaded", () => {
-  const skills = document.querySelectorAll(".skill");
-
-  skills.forEach(skill => {
-    const percentage = skill.getAttribute("data-skill");
-    const color = skill.getAttribute("data-color");
-
-    const circle = skill.querySelector(".circle");
-    circle.style.setProperty("--percentage", percentage);
-    circle.style.setProperty("border-color
-
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
