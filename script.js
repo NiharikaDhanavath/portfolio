@@ -1,19 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const progressBars = document.querySelectorAll(".progress-bar");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const bar = entry.target;
-            if (entry.isIntersecting) {
-                const targetWidth = bar.getAttribute("data-target-width");
-                bar.style.width = targetWidth;
-            } else {
-                bar.style.width = "0"; // Reset width for reanimation
-            }
-        });
-    }, { threshold: 0.5 });
+ document.addEventListener("DOMContentLoaded", () => {
+  const skills = document.querySelectorAll(".skill");
 
-    progressBars.forEach(bar => {
-        observer.observe(bar);
-    });
-});
+  skills.forEach(skill => {
+    const percentage = skill.getAttribute("data-skill");
+    const color = skill.getAttribute("data-color");
+
+    const circle = skill.querySelector(".circle");
+    circle.style.setProperty("--percentage", percentage);
+    circle.style.setProperty("border-color
+
