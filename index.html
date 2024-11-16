@@ -54,79 +54,100 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills-section" id="Skills">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill">
-          <span class="skill-name">HTML</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="85%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Python</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="90%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">CSS</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="80%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">JavaScript</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="75%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Angular</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="70%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">DevOps</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="65%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Node</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="70%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">React</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="75%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Git</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="90%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Artificial Intelligence</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="80%"></div>
-          </div>
-        </div>
-        <div class="skill">
-          <span class="skill-name">Machine Learning</span>
-          <div class="progress-bar-container">
-            <div class="progress-bar" data-target-width="75%"></div>
-          </div>
-        </div>
-      </div>
-      <p class="more-text">and more...</p>
-    </section>
+   
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills Display</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2e0142;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+  .skills-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .skill {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skill .circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #555 calc(var(--percentage) * 1%));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .skill .label {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .skill .percentage {
+    position: absolute;
+    bottom: -20px;
+    font-size: 18px;
+  }
+</style>
+</head>
+<body>
 
+<h1>My Software Skills</h1>
+<div class="skills-container">
+  <div class="skill" style="--color: #00aaff; --percentage: 85;">
+    <div class="circle">
+      <span class="label">Ps</span>
+    </div>
+    <span class="percentage">85%</span>
+  </div>
+  <div class="skill" style="--color: #ff6d00; --percentage: 75;">
+    <div class="circle">
+      <span class="label">Ai</span>
+    </div>
+    <span class="percentage">75%</span>
+  </div>
+  <div class="skill" style="--color: #a352d4; --percentage: 80;">
+    <div class="circle">
+      <span class="label">Ae</span>
+    </div>
+    <span class="percentage">80%</span>
+  </div>
+  <div class="skill" style="--color: #ae58c5; --percentage: 75;">
+    <div class="circle">
+      <span class="label">Pr</span>
+    </div>
+    <span class="percentage">75%</span>
+  </div>
+  <div class="skill" style="--color: #00b300; --percentage: 80;">
+    <div class="circle">
+      <span class="label">Cd</span>
+    </div>
+    <span class="percentage">80%</span>
+  </div>
+  <div class="skill" style="--color: #00a69c; --percentage: 14;">
+    <div class="circle">
+      <span class="label">3D</span>
+    </div>
+    <span class="percentage">14%</span>
+  </div>
+</div>
+</body>
     <script src="script.js"></script>
   </main>
 </body>
