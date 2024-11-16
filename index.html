@@ -54,98 +54,61 @@
     </section>
 
     <!-- Skills Section -->
-   
+
+
+    <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills Display</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #2e0142;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-  }
-  .skills-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .skill {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .skill .circle {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: conic-gradient(var(--color) calc(var(--percentage) * 1%), #555 calc(var(--percentage) * 1%));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .skill .label {
-    position: absolute;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  .skill .percentage {
-    position: absolute;
-    bottom: -20px;
-    font-size: 18px;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Display</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <h1>My Software Skills</h1>
 <div class="skills-container">
-  <div class="skill" style="--color: #00aaff; --percentage: 85;">
+  <div class="skill" data-skill="85" data-color="#00aaff">
     <div class="circle">
       <span class="label">Ps</span>
     </div>
     <span class="percentage">85%</span>
   </div>
-  <div class="skill" style="--color: #ff6d00; --percentage: 75;">
+  <div class="skill" data-skill="75" data-color="#ff6d00">
     <div class="circle">
       <span class="label">Ai</span>
     </div>
     <span class="percentage">75%</span>
   </div>
-  <div class="skill" style="--color: #a352d4; --percentage: 80;">
+  <div class="skill" data-skill="80" data-color="#a352d4">
     <div class="circle">
       <span class="label">Ae</span>
     </div>
     <span class="percentage">80%</span>
   </div>
-  <div class="skill" style="--color: #ae58c5; --percentage: 75;">
+  <div class="skill" data-skill="75" data-color="#ae58c5">
     <div class="circle">
       <span class="label">Pr</span>
     </div>
     <span class="percentage">75%</span>
   </div>
-  <div class="skill" style="--color: #00b300; --percentage: 80;">
+  <div class="skill" data-skill="80" data-color="#00b300">
     <div class="circle">
       <span class="label">Cd</span>
     </div>
     <span class="percentage">80%</span>
   </div>
-  <div class="skill" style="--color: #00a69c; --percentage: 14;">
+  <div class="skill" data-skill="14" data-color="#00a69c">
     <div class="circle">
       <span class="label">3D</span>
     </div>
     <span class="percentage">14%</span>
   </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+
 </div>
 </body>
     <script src="script.js"></script>
