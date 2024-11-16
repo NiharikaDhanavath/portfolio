@@ -133,52 +133,84 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Skills Section */
-.skills-section {
-    padding: 60px 20px;
-    text-align: center;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e0142;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
-.skills-section h2 {
-    font-size: 72px;
-    color: rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;
+h1 {
+  margin-bottom: 30px;
+  font-size: 2em;
 }
 
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .skill {
-    text-align: center;
-    color: #fff;
-    width: 150px;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.skill-name {
-    font-size: 16px;
-    margin-bottom: 5px;
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #555;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.progress-bar-container {
-    background-color: #333;
-    height: 5px;
-    border-radius: 5px;
-    overflow: hidden;
+.circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 8px solid #555;
+  box-sizing: border-box;
+  clip-path: circle(50%);
 }
 
-.progress-bar {
-    height: 100%;
-    background-color: #fff;
-    width: 0;
-    transition: width 2s ease-in-out;
+.label {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.more-text {
-    margin-top: 20px;
+.percentage {
+  position: absolute;
+  bottom: -20px;
+  font-size: 18px;
+}
+
+.skill[data-skill] .circle::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  clip-path: circle(50%);
+  border: 8px solid transparent;
+  box-sizing: border-box;
+  transform: rotate(calc(var(--percentage) * 3.6deg));
 }
