@@ -183,6 +183,9 @@ nav a:hover {
     margin-top: 20px;
 }
 
+
+
+/* Works Section */
 /* Works Section */
 .works-section {
   padding: 60px 20px;
@@ -191,8 +194,11 @@ nav a:hover {
 
 .works-section h2 {
   font-size: 72px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
+  letter-spacing: 2px; /* Optional, for a cleaner effect */
 }
 
 .projects-container {
@@ -226,8 +232,10 @@ nav a:hover {
 
 .project-info h3 {
   font-size: 20px;
-  margin: 0 0 10px;
+  font-weight: bold;
+  text-transform: uppercase;
   color: #fff;
+  margin: 0 0 10px;
 }
 
 .project-info p {
@@ -245,6 +253,7 @@ nav a:hover {
   padding: 8px 16px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  text-transform: uppercase; /* Matches the font style */
 }
 
 .github-link:hover {
