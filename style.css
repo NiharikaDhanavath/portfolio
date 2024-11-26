@@ -148,39 +148,41 @@ nav a:hover {
 
 .skills-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 900px; /* Matches the About section */
-    margin: 0 auto; /* Ensures alignment */
+    flex-wrap: wrap; /* Allows rows to wrap */
+    justify-content: space-between; /* Spaces out items horizontally */
+    max-width: 900px; /* Sets a limit to the container width */
+    margin: 0 auto; /* Centers the container on the page */
+    gap: 20px; /* Adds space between rows */
 }
 
 .skill {
-    text-align: center;
-    color: #fff;
-    width: 150px;
+    flex: 0 0 45%; /* Each skill takes 45% of the row width */
+    display: flex; /* Allows alignment of the skill name and bar */
+    justify-content: space-between; /* Aligns name and bar horizontally */
+    align-items: center; /* Aligns items vertically */
 }
 
 .skill-name {
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 18px; /* Adjusts font size for better visibility */
+    font-weight: bold;
 }
 
 .progress-bar-container {
+    flex: 1; /* Ensures the progress bar takes up remaining space */
+    margin-left: 20px; /* Adds space between skill name and bar */
     background-color: #333; /* Bar container background */
-    height: 8px; /* Height of the progress bar */
+    height: 5px; /* Height of the progress bar */
     border-radius: 5px; /* Rounded corners */
-    overflow: hidden; /* Clip overflowing elements */
-    margin-top: 5px; /* Spacing between skill name and bar */
-    width: 100%; /* Full width of the container */
+    overflow: hidden;
 }
 
 .progress-bar {
-    background-color: #fff; /* Actual progress bar color */
     height: 100%; /* Fill the container height */
-    width: 0; /* Start with zero width for animation */
+    background-color: #fff; /* Progress bar color */
+    width: 0; /* Initial width for animation */
     transition: width 2s ease-in-out; /* Smooth animation */
 }
+
 
 .more-text {
     margin-top: 20px;
