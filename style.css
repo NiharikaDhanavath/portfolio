@@ -258,6 +258,8 @@ nav a:hover {
     background-color: #444;
 }
 
+
+
 /* Connect Section */
 .connect-section {
     padding: 60px 20px;
@@ -288,6 +290,7 @@ nav a:hover {
     transform: scale(1.2);
 }
 
+/* Form Styling */
 form {
     max-width: 500px;
     margin: 0 auto;
@@ -298,21 +301,39 @@ form {
 
 form input,
 form textarea {
-    width: 100%;
-    padding: 10px;
-    background-color: #111;
-    border: 1px solid #fff;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff; /* Sleek white line */
     color: #fff;
-    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Transparent placeholder text */
+}
+
+form input:focus,
+form textarea:focus {
+    border-bottom: 2px solid #ddd; /* Change color when focused */
+}
+
+form textarea {
+    resize: none; /* Disable resizing */
+    height: 100px;
 }
 
 form button {
     padding: 10px 20px;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     color: #fff;
     font-weight: bold;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -320,4 +341,3 @@ form button:hover {
     background-color: #fff;
     color: #000;
 }
-
