@@ -144,43 +144,41 @@ nav a:hover {
     font-size: 72px;
     color: rgba(255, 255, 255, 0.6);
     margin-bottom: 20px;
+}
+
 .skills-container {
     display: flex;
-    flex-wrap: wrap; /* Allows wrapping to create rows */
-    justify-content: space-between; /* Spaces items evenly */
-    max-width: 900px; /* Restrict overall width for better alignment */
-    margin: 0 auto; /* Center the container */
-    gap: 30px; /* Add space between rows */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px; /* Matches the About section */
+    margin: 0 auto; /* Ensures alignment */
 }
 
 .skill {
-    display: flex;
-    justify-content: space-between; /* Align text and bar horizontally */
-    align-items: center; /* Align vertically */
-    flex: 0 0 48%; /* Two items per row with spacing */
+    text-align: center;
+    color: #fff;
+    width: 150px;
 }
 
 .skill-name {
-    flex: 1; /* Allow equal spacing for text */
-    font-size: 18px; /* Slightly larger text for clarity */
-    font-weight: bold;
-    text-align: left; /* Align text to the left */
-    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 16px;
+    margin-bottom: 5px;
 }
 
 .progress-bar-container {
-    flex: 3; /* Bar takes 3x the space of text */
-    margin-left: 10px; /* Space between text and bar */
-    background-color: #333;
-    height: 5px;
-    border-radius: 5px;
-    overflow: hidden;
+    background-color: #333; /* Bar container background */
+    height: 8px; /* Height of the progress bar */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing elements */
+    margin-top: 5px; /* Spacing between skill name and bar */
+    width: 100%; /* Full width of the container */
 }
 
 .progress-bar {
-    height: 100%;
-    background-color: #fff;
-    width: 0; /* Initial state for animation */
+    background-color: #fff; /* Actual progress bar color */
+    height: 100%; /* Fill the container height */
+    width: 0; /* Start with zero width for animation */
     transition: width 2s ease-in-out; /* Smooth animation */
 }
 
