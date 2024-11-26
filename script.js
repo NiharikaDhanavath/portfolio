@@ -1,19 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const progressBars = document.querySelectorAll(".progress-bar");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const bar = entry.target;
-            if (entry.isIntersecting) {
-                const targetWidth = bar.getAttribute("data-target-width");
-                bar.style.width = targetWidth;
-            } else {
-                bar.style.width = "0"; // Reset width for reanimation
+    if (progressBars.length > 0) {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const bar = entry.target;
+                    if (entry.isIntersecting) {
+                        const targetWidth = bar.dataset.targetWidth;
+                        bar.style.width = targetWidth;
+                    }
+                });
+            },
+            {
+                threshold: 0.5, // Trigger animation when 50% of the element is visible
             }
-        });
-    }, { threshold: 0.5 });
+        );
 
-    progressBars.forEach(bar => {
-        observer.observe(bar);
-    });
+        progressBars.forEach((bar) => observer.observe(bar));
+    }
 });
