@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     const bar = entry.target;
                     if (entry.isIntersecting) {
                         const targetWidth = bar.dataset.targetWidth;
-                        bar.style.width = targetWidth;
+                        bar.style.width = targetWidth; // Animate when in view
+                    } else {
+                        bar.style.width = "0"; // Reset when out of view
                     }
                 });
             },
