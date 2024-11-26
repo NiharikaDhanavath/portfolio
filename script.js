@@ -18,27 +18,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-import { Component } from '@angular/core';
-import { trigger, style, transition, animate, keyframes } from '@angular/animations';
-
-npm install @angular/animations
-
-@Component({
-  selector: 'app-connect',
-  templateUrl: './connect.component.html',
-  styleUrls: ['./connect.component.css'],
-  animations: [
-    trigger('fadeInUp', [
-      transition(':enter', [
-        animate(
-          '1s ease-out',
-          keyframes([
-            style({ opacity: 0, transform: 'translateY(50px)', offset: 0 }),
-            style({ opacity: 1, transform: 'translateY(0)', offset: 1 }),
-          ])
-        ),
-      ]),
-    ]),
-  ],
-})
-export class ConnectComponent {}
