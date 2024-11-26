@@ -167,17 +167,19 @@ nav a:hover {
 }
 
 .progress-bar-container {
-    background-color: #333;
-    height: 5px;
-    border-radius: 5px;
-    overflow: hidden;
+    background-color: #333; /* Bar container background */
+    height: 8px; /* Height of the progress bar */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Clip overflowing elements */
+    margin-top: 5px; /* Spacing between skill name and bar */
+    width: 100%; /* Full width of the container */
 }
 
 .progress-bar {
-    height: 100%;
-    background-color: #fff;
-    width: 0;
-    transition: width 2s ease-in-out;
+    background-color: #fff; /* Actual progress bar color */
+    height: 100%; /* Fill the container height */
+    width: 0; /* Start with zero width for animation */
+    transition: width 2s ease-in-out; /* Smooth animation */
 }
 
 .more-text {
