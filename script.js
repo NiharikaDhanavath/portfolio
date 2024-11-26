@@ -9,18 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     const targetWidth = bar.dataset.targetWidth;
 
                     if (entry.isIntersecting) {
-                        // Animate the progress bar
-                        bar.style.transition = "width 2s ease-in-out"; // Ensure smooth animation
-                        bar.style.width = targetWidth;
-                    } else {
-                        // Reset the progress bar with a small delay to allow retriggering
-                        bar.style.transition = "none"; // Disable transition for immediate reset
-                        bar.style.width = "0";
-
-                        // Force reflow for the retrigger
+                        // Reset and reapply width for smooth animation
                         setTimeout(() => {
-                            bar.style.transition = "width 2s ease-in-out"; // Re-enable transition
-                        }, 100);
+                            bar.style.width = targetWidth;
+                        }, 100); // Small delay ensures it re-triggers
+                    } else {
+                        // Remove width when out of view
+                        bar.style.width = "0";
                     }
                 });
             },
