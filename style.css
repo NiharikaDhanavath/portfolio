@@ -296,7 +296,7 @@ form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px; /* Reduced gap for closer spacing */
 }
 
 form input,
@@ -306,7 +306,7 @@ form textarea {
     border-bottom: 2px solid #fff; /* Sleek white line */
     color: #fff;
     font-size: 16px;
-    padding: 10px;
+    padding: 8px 0; /* Adjusted padding for a compact look */
     outline: none;
     transition: border-color 0.3s ease;
 }
