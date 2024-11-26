@@ -6,11 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
             (entries) => {
                 entries.forEach((entry) => {
                     const bar = entry.target;
+                    const targetWidth = bar.dataset.targetWidth;
+
                     if (entry.isIntersecting) {
-                        const targetWidth = bar.dataset.targetWidth;
-                        bar.style.width = targetWidth; // Animate when in view
+                        // Animate the progress bar
+                        bar.style.transition = "width 2s ease-in-out"; // Ensure smooth animation
+                        bar.style.width = targetWidth;
                     } else {
-                        bar.style.width = "0"; // Reset when out of view
+                        // Reset the progress bar with a small delay to allow retriggering
+                        bar.style.transition = "none"; // Disable transition for immediate reset
+                        bar.style.width = "0";
+
+                        // Force reflow for the retrigger
+                        setTimeout(() => {
+                            bar.style.transition = "width 2s ease-in-out"; // Re-enable transition
+                        }, 100);
                     }
                 });
             },
