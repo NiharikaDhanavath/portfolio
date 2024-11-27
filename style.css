@@ -343,3 +343,13 @@ form button:hover {
     background-color: #fff;
     color: #000;
 }
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111; /* Footer background color */
+    color: #fff; /* Footer text color */
+    font-size: 14px;
+    margin-top: 20px;
+}
+
