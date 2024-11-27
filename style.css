@@ -351,6 +351,7 @@ form button:hover {
     color: white; /* Footer text color */
     font-size: 16px; /* Footer font size */
     font-family: Arial, sans-serif; /* Font style */
+    background-color: black; /* Ensure the background is black */
 }
 
 .footer .heart {
